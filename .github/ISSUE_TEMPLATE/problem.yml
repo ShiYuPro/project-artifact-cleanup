@@ -1,0 +1,34 @@
+name: Problem or first-use blocker
+description: Share a reproducible problem or the step that prevented you from using the skill.
+title: "[Problem] "
+body:
+  - type: markdown
+    attributes:
+      value: "Use disposable sample files. Remove credentials, private paths and private logs before submitting."
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Agent and version, operating system, Python version, and commit if known.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps or command
+      description: What did you try? Include the smallest reproducible example.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: Include the error text or explain where the instructions became unclear.
+    validations:
+      required: true

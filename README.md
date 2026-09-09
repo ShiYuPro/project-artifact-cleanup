@@ -2,6 +2,29 @@
 
 Stop AI-generated scratch files from piling up. A Codex and Claude Code skill with deletion previews, configurable retention, pinning, and recovery before expiry.
 
+## See it work
+
+Run a self-contained demo from this repository with Python 3.9+:
+
+```sh
+python3 scripts/demo.py
+```
+
+It uses the real CLI with generated sample files in a temporary directory:
+
+```text
+1. Created one 13-byte scratch file in a managed task; app.py stays outside.
+2. Zero-day preview: would_delete_bytes=13, payload_deleted=false.
+3. Retained for 7 days; sweep skips the task because it has not expired.
+4. Recovered identical bytes; original pinned and skipped by the next sweep.
+5. app.py unchanged. PASS. Removing only this demo's temporary fixtures.
+```
+
+The demo checks each result and exits with an error if it differs. It does not
+scan an existing project. Its generated fixtures are removed when it exits.
+This demonstrates the helper's behavior; deciding which real files are disposable
+still requires your judgment. [Run the commands yourself](references/setup.md).
+
 ## Install
 
 From your project directory, choose the command for your agent. Existing destinations
@@ -52,3 +75,13 @@ See [SOURCES.md](SOURCES.md) for reviewed alternatives and adaptation decisions,
 and [LICENSE](LICENSE) for terms. This standalone repository was split from
 [Agent Workflow Skills](https://github.com/ShiYuPro/agent-workflow-skills).
 Future changes for this skill belong here.
+
+## Feedback and related work
+
+[Report a problem or first-use blocker](https://github.com/ShiYuPro/project-artifact-cleanup/issues/new/choose).
+Include your agent, operating system, command, expected result and actual result;
+use a small disposable example and remove private paths, logs and credentials.
+
+[More agent skills](https://github.com/ShiYuPro/agent-workflow-skills) ·
+[Creator and projects](https://shiu.pro/) ·
+[App and website collaboration](https://shiu.pro/work-with-me/)
