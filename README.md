@@ -27,6 +27,17 @@ still requires your judgment. [Run the commands yourself](references/setup.md).
 
 ## Install
 
+With [Skills CLI](https://skills.sh/docs) (Node.js and npm required):
+
+```sh
+npx skills add ShiYuPro/project-artifact-cleanup --skill project-artifact-cleanup
+```
+
+Choose Codex or Claude Code when prompted. This installs into the current project;
+review the destination if you already have this skill installed.
+
+Or install directly with Git:
+
 From your project directory, choose the command for your agent. Existing destinations
 are not overwritten by `git clone`.
 
@@ -85,3 +96,5 @@ use a small disposable example and remove private paths, logs and credentials.
 [More agent skills](https://github.com/ShiYuPro/agent-workflow-skills) ·
 [Creator and projects](https://shiu.pro/) ·
 [App and website collaboration](https://shiu.pro/work-with-me/)
+
+For job opportunities or cofounder conversations, [contact Shiyu Yang](https://shiu.pro/contact/).
