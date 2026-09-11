@@ -25,6 +25,8 @@ scan an existing project. Its generated fixtures are removed when it exits.
 This demonstrates the helper's behavior; deciding which real files are disposable
 still requires your judgment. [Run the commands yourself](references/setup.md).
 
+[View on skills.sh](https://skills.sh/ShiYuPro/project-artifact-cleanup/project-artifact-cleanup)
+
 ## Install
 
 With [Skills CLI](https://skills.sh/docs) (Node.js and npm required):
